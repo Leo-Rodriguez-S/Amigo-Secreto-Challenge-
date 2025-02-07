@@ -24,3 +24,13 @@ function limpiarLista (){
     document.getElementById('listaAmigos').innerHTML = "";
     return;
 }
+
+function mostrarAmigos() {
+    limpiarLista();
+    for (i = 0; i < amigos.length; i++) {
+    let li = document.createElement("li");
+    li.textContent = amigos[i];
+    document.getElementById('listaAmigos').appendChild(li);
+    }    
+    return;
+}
