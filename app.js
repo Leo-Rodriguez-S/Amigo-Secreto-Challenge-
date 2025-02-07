@@ -34,3 +34,14 @@ function mostrarAmigos() {
     }    
     return;
 }
+
+function sortearAmigo() {
+    if(amigos.length === 0){
+        alert ("Por favor ingrese los amigos que jugarán");
+    }else {
+        let numNombre = Math.floor(Math.random()*amigos.length);
+        limpiarLista();
+        document.querySelector('#resultado').innerHTML = `Tu amigo secreto es: ${amigos[numNombre]}`;
+    }
+    return;
+}
