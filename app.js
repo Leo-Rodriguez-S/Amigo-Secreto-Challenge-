@@ -8,3 +8,8 @@ function agregarAmigo(nombre){
     mostrarAmigos();
     return;
 }
+
+function limpiarCaja() {
+    document.querySelector("#amigo").value = "";
+    return;
+}
