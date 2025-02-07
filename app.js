@@ -19,3 +19,8 @@ function validarEntrada(){
     limpiarCaja();
     return;
 }
+
+function limpiarLista (){
+    document.getElementById('listaAmigos').innerHTML = "";
+    return;
+}
