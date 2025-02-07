@@ -13,3 +13,9 @@ function limpiarCaja() {
     document.querySelector("#amigo").value = "";
     return;
 }
+
+function validarEntrada(){
+    document.querySelector("#amigo").value == "" ? alert("Por favor, inserte un nombre") : agregarAmigo();
+    limpiarCaja();
+    return;
+}
