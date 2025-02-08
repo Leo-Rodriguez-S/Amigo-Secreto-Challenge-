@@ -1,25 +1,24 @@
 //Arreglo que contendrá los amigos que jugarán
 let amigos = [];
 
-//Se agregan los amigos al arreglo, se muestran y se limpia el input
+//Se valida si se ingresaron datos, en caso afirmativo, se agregan los mismos, 
+//En caso de no haber datos, se le alerta al usuario
+//Se limpia el input
 function agregarAmigo(nombre){
+    if (document.querySelector("#amigo").value === "") {
+        alert("Por favor, inserte un nombre");
+    }else{
     nombre = document.getElementById('amigo').value;
     amigos.push(nombre);
-    limpiarCaja();
     mostrarAmigos();
+    limpiarCaja();
+    }
     return;
 }
 
 //Se limpia el input
 function limpiarCaja() {
     document.querySelector("#amigo").value = "";
-    return;
-}
-
-//Se valida si el input está vacío para alertar al usuario, si no, se agrega el amigo
-function validarEntrada(){
-    document.querySelector("#amigo").value == "" ? alert("Por favor, inserte un nombre") : agregarAmigo();
-    limpiarCaja();
     return;
 }
 
